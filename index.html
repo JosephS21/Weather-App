@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="title">
+        <h1>Check a City's Weather Conditions</h1>
+    </div>
+    <div class="input">
+        <input type="text" class="inputValue" placeholder="Enter a city">
+        <input type="submit" value="Submit" class="button">
+    </div>
+
+    <div class="display">
+        <h1 class="name"></h1>
+        <p class="desc"></p>
+        <p class="temp"></p>
+        <p class="min"></p>
+        <p class="max"></p>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
+
+
+return (
+    <div>
+        <h1>{inputValue.value}</h1>
+        <form onSubmit={(e) => handleSearch(e) }>
+            <input 
+                type="text" 
+                class="inputValue"
+                placeholder="Enter a city"
+                value={currSearch}
+                onChange={(e) => setCurrSearch(parseInt(e.target.value))}
+            />
+            <input type="submit" value="Submit" class="button">
+        </form>
+    </div>
+)
